@@ -1,25 +1,71 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header/Header'
+import Carousel from './Carousel/Carousel'
+import NewsList from './Newslist/NewsList'
+import { Container } from 'reactstrap';
 
+import './App.css';
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      news: [
+        { 
+          src: '',
+          title: '', 
+          content: ''}
+      ],
+      images: [
+        {
+          
+        }  
+      ],
+      contentLoaded: false,
+      index: ''
+
+    }
+  }
+  componentDidMount() {
+    fetch('https://beta.maxtigers.com/wp/wp-json/wp/v2/posts')
+    .then(res =>res.json())
+    .then(data => {
+      console.log('data incial', data);
+      this.setState({news: data});
+      let featuredImageId = '';
+      let urls = [];
+      data.forEach((post, index) => {
+        
+        featuredImageId = post.featured_media;
+        fetch(`https://beta.maxtigers.com/wp/wp-json/wp/v2/media/${featuredImageId}`)
+        .then(res =>  res.json())
+        .then(data =>{
+         urls[index] = (data.guid.rendered)
+         console.log('urls', urls);
+         this.setState({images: urls, contentLoaded:true, index: index} )        
+        })
+      });
+      
+    });
+    
+    /*  */
+     
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Container>
+          <Header />
+          <Carousel />
+          <h2 >Últimas Noticias</h2>
+          
+          <NewsList  
+                  news={this.state.news} 
+                  images={this.state.images} 
+                  contentLoaded={this.state.contentLoaded} 
+                  index={this.state.index}
+                
+          />
+        </Container>
       </div>
     );
   }
