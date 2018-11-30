@@ -46,9 +46,6 @@ class App extends Component {
       });
       
     });
-    
-    /*  */
-     
   }
   render() {
     return (
@@ -57,14 +54,12 @@ class App extends Component {
           <Header />
           <Carousel />
           <h2 >Últimas Noticias</h2>
-          
-          <NewsList  
-                  news={this.state.news} 
-                  images={this.state.images} 
-                  contentLoaded={this.state.contentLoaded} 
-                  index={this.state.index}
-                
-          />
+               <NewsList  
+                      news={this.state.news} 
+                      images={this.state.images} 
+                      contentLoaded={this.state.contentLoaded} 
+                      index={this.state.index}
+                />
         </Container>
       </div>
     );

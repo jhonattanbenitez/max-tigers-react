@@ -1,28 +1,24 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle} from 'reactstrap';
-import Grid from '@material-ui/core/Grid';
-import  './card.css';
+import { Card, CardImg, CardText, CardBody, CardTitle, Col} from 'reactstrap';
+import  './news.css';
 
 
 
 const News = ({title, content, image, }) => {
   
    return (
-    <div>
-     
-             <Grid item xs={12}>
-               <Card className="cardproperties">
-                <CardImg top width="100%" src={image} alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>{title}</CardTitle>
-                  <CardText>{content}</CardText>
-                </CardBody>
-              </Card>
-             </Grid>
-         
-      
-      
-    </div>
+                 
+               
+                <Col xs="12" sm="4">
+                  <Card className="cardproperties">
+                    <CardImg top width="100%" src={image} alt="Card image cap" />
+                    <CardBody>
+                      <CardTitle>{title}</CardTitle>
+                      <CardText>{content}</CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
+    
   );
 };
 
