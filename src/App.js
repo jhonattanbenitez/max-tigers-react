@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header/Header'
-import Carousel from './Carousel/Carousel'
-import NewsList from './Newslist/NewsList'
+import Header from './Components/Header/Header';
 import { Container } from 'reactstrap';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Teams from './Components/Teams/Teams';
+import Home from './Components/Home/Home';
 
 import './App.css';
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
 
     }
   }
-  componentDidMount() {
+    componentDidMount() {
     fetch('https://beta.maxtigers.com/wp/wp-json/wp/v2/posts')
     .then(res =>res.json())
     .then(data => {
@@ -50,17 +51,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container>
-          <Header />
-          <Carousel />
-          <h2 >Últimas Noticias</h2>
-               <NewsList  
+        <BrowserRouter>
+          <Container>
+            <Header />
+            
+            {/* <NewsList news={this.state.news} 
+                        images={this.state.images} 
+                        contentLoaded={this.state.contentLoaded} 
+                        index={this.state.index} 
+                        
+                        /> */}
+                 
+                <Switch> 
+                    <Route path='/' render={(props) => <Home {...props} 
                       news={this.state.news} 
                       images={this.state.images} 
                       contentLoaded={this.state.contentLoaded} 
-                      index={this.state.index}
-                />
-        </Container>
+                      index={this.state.index} />} exact/>
+                    <Route path='/teams' component={Teams} />
+                 </Switch>
+          </Container>
+        </BrowserRouter>
       </div>
     );
   }

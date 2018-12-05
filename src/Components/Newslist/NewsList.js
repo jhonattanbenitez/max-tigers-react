@@ -4,10 +4,10 @@ import ContentLoader from 'react-content-loader';
 import { Row } from 'reactstrap';
 const NewsList = ({ news, images, contentLoaded, index }) => {
   console.log(contentLoaded);
-  console.log(news);  
+  console.log('news', news);  
   console.log('index: ', index);
-
   console.log('data en newslist', news);
+  console.log("images en newlist", images);
   if(contentLoaded === false){
     return(<ContentLoader type="instagram" />);
   }else{

@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logoweb1.png'
+import {NavLink} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
+ 
   } from 'reactstrap';
 
 export default class Header extends React.Component {
@@ -27,21 +28,21 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <a href="http://localhost:3000/"><img src={logo} width="201" height="101" class="d-inline-block align-top" alt="" /></a>
+          <a href="http://localhost:3000/"><img src={logo} width="201" height="101"  alt="" /></a>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Noticias</NavLink>
+                <NavLink to="/">Noticias</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Equipos</NavLink>
+                <NavLink to="/teams">Equipos</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Streams</NavLink>
+                <NavLink to="/streams">Streams</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Patrocinadores</NavLink>
+                <NavLink to="/patrocinadores">Patrocinadores</NavLink>
               </NavItem>
             
             </Nav>
