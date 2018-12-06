@@ -4,6 +4,34 @@ import TeamsNav from '../TeamsNav/TeamsNav'
 import { Row } from 'reactstrap';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
+const LeagueOfLegends = () =>{
+    return (
+        <div>
+            <h3>League Of Legends</h3>
+            <Row>
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+            </Row>
+        </div>
+    );
+}
+
+const RocketLeague = () =>{
+    return (
+        <div>
+            <h3>Rocket League</h3>
+            <Row>
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+            </Row>
+        </div>
+    );
+}
+
 const Teams = () =>{
     return(
         <div>
@@ -21,7 +49,8 @@ const Teams = () =>{
                 <div>
                     <TeamsNav />
                     <Switch>
-                        <Route path="/teams/player" component={Player}/>
+                        <Route path="/teams/lol" component={LeagueOfLegends}/>
+                        <Route path="/teams/rl" component={RocketLeague}/>
                     </Switch>
                 </div>
             </BrowserRouter>

@@ -1,52 +1,17 @@
 import React from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Button, ButtonGroup } from 'reactstrap';
+import "./teamsnav.css";
+import {NavLink} from 'react-router-dom';
 
 export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  }
-
   render() {
     return (
-      <div>
-        <Nav tabs>
-          <NavItem>
-            <NavLink href="#" active>Link</NavLink>
-          </NavItem>
-          <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-          <NavItem>
-            <NavLink href="#">Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">Disabled Link</NavLink>
-          </NavItem>
-        </Nav>
-      </div>
+      <ButtonGroup>
+        <Button><NavLink to="/teams/lol" className="teamnavigation">League of Legends</NavLink></Button>
+        <Button><NavLink to="/teams/rl" className="teamnavigation">Rocket League</NavLink></Button>
+        <Button>Counter Strike: GO</Button>
+        <Button>Clash Royale</Button>
+      </ButtonGroup>
     );
   }
 }
