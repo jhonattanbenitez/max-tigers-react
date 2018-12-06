@@ -1,8 +1,9 @@
 import React from 'react';
 import Player from '../Player/Player'
 import TeamsNav from '../TeamsNav/TeamsNav'
-import { Row } from 'reactstrap';
+import { Row, Container, Card, CardImg } from 'reactstrap';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import equipos from './equipos.png';
 
 const LeagueOfLegends = () =>{
     return (
@@ -46,13 +47,18 @@ const Teams = () =>{
                
             </Row> */}
             <BrowserRouter>
-                <div>
-                    <TeamsNav />
-                    <Switch>
-                        <Route path="/teams/lol" component={LeagueOfLegends}/>
-                        <Route path="/teams/rl" component={RocketLeague}/>
-                    </Switch>
-                </div>
+                
+                    <Container>
+                        <TeamsNav />
+                        <Card className="cardproperties">
+                            <CardImg top width="100%" src={equipos} alt="Card image cap" />
+                        </Card>
+                        <Switch>
+                            <Route path="/teams/lol" component={LeagueOfLegends}/>
+                            <Route path="/teams/rl" component={RocketLeague}/>
+                        </Switch>
+                    </Container>
+                
             </BrowserRouter>
         </div>
     );

@@ -7,9 +7,9 @@ export default class Example extends React.Component {
   render() {
     return (
       <ButtonGroup>
-        <Button><NavLink to="/teams/lol" className="teamnavigation">League of Legends</NavLink></Button>
-        <Button><NavLink to="/teams/rl" className="teamnavigation">Rocket League</NavLink></Button>
-        <Button>Counter Strike: GO</Button>
+        <Button><NavLink to="/teams/lol" className="teamnavigation">LoL</NavLink></Button>
+        <Button><NavLink to="/teams/rl" className="teamnavigation">RL</NavLink></Button>
+        <Button>CS: GO</Button>
         <Button>Clash Royale</Button>
       </ButtonGroup>
     );
