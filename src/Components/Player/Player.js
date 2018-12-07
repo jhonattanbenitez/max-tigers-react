@@ -3,6 +3,7 @@ import user from './user.png'
 import { Card, CardImg, CardText, CardBody, CardTitle, Col, CardSubtitle} from 'reactstrap';
 
 const Player = () =>{
+    
     return(
 
         <div>

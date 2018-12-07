@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 import Partners from './Components/Partners/Partners';
 import './App.css';
+/* import lolplayers from './lol.js'; */
 
 const Streams = () =>{
   return(
@@ -65,16 +66,7 @@ class App extends Component {
           <div>
             <Header />
             <Container>
-              
-              
-              {/* <NewsList news={this.state.news} 
-                          images={this.state.images} 
-                          contentLoaded={this.state.contentLoaded} 
-                          index={this.state.index} 
-                          
-                          /> */}
-                   
-                  <Switch> 
+                   <Switch> 
                       <Route path='/' render={(props) => <Home {...props} 
                         news={this.state.news} 
                         images={this.state.images} 

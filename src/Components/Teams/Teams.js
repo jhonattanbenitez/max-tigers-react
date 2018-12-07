@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Player from '../Player/Player'
 import TeamsNav from '../TeamsNav/TeamsNav'
 import { Row, Container, Card, CardImg } from 'reactstrap';
@@ -33,35 +33,47 @@ const RocketLeague = () =>{
     );
 }
 
-const Teams = () =>{
-    return(
-        <div>
-            <h2>Equipos</h2>
-            {/* <Row>
-                
-                <Player />
-                <Player />
-                <Player />
-                <Player />
-                <Player />
-               
-            </Row> */}
-            <BrowserRouter>
-                
-                    <Container>
-                        <TeamsNav />
-                        <Card className="cardproperties">
-                            <CardImg top width="100%" src={equipos} alt="Card image cap" />
-                        </Card>
-                        <Switch>
-                            <Route path="/teams/lol" component={LeagueOfLegends}/>
-                            <Route path="/teams/rl" component={RocketLeague}/>
-                        </Switch>
-                    </Container>
-                
-            </BrowserRouter>
-        </div>
-    );
+class Teams extends Component {
+    constructor(){
+        super()
+        this.state = {
+            lolplayers: [
+                {
+                    id: "01",
+                    image: "",
+                    incovador: "Invocador 1",
+                    linea: "Top",
+                    nombre: "Nombre 1"
+                }
+            ]
+
+        }
+
+        }
+
+    render() {
+        return(
+            <div>
+                <h2>Equipos</h2>
+                     <BrowserRouter>
+                    
+                        <Container>
+                            <TeamsNav />
+                            <Card className="cardproperties">
+                                <CardImg top width="100%" src={equipos} alt="Card image cap" />
+                            </Card>
+                            <Switch>
+                                <Route path="/teams/lol" component={LeagueOfLegends}/>
+                                <Route path="/teams/rl" component={RocketLeague}/>
+                            </Switch>
+                        </Container>
+                    
+                </BrowserRouter>
+            </div>);
+
+    }
+    
+    
 }
 
 export default Teams;
