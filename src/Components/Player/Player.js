@@ -1,8 +1,8 @@
 import React from 'react';
-import user from './user.png'
+/* import user from './user.png' */
 import { Card, CardImg, CardText, CardBody, CardTitle, Col, CardSubtitle} from 'reactstrap';
 
-const Player = () =>{
+const Player = (props) =>{
     
     return(
 
@@ -12,8 +12,8 @@ const Player = () =>{
                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                     <CardBody>
                       <CardTitle>Invocador</CardTitle>
-                      <CardSubtitle>Linea</CardSubtitle>
-                      <CardSubtitle>Nombre</CardSubtitle>
+                      <CardSubtitle>{props.linea}</CardSubtitle>
+                      <CardSubtitle>{props.name}</CardSubtitle>
                       <CardText></CardText>
                     </CardBody>
                   </Card>
