@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './png-trans.png'
+import './header.css';
 import {NavLink} from 'react-router-dom';
 import {
   Collapse,
@@ -27,7 +28,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" className="navbar">
           <a href="http://localhost:3000/"><img src={logo} width="201" height="101"  alt="" /></a>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
