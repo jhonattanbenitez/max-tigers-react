@@ -9,8 +9,8 @@ export default class Example extends React.Component {
       <ButtonGroup>
         <Button><NavLink to="/teams/lol" className="teamnavigation">LoL</NavLink></Button>
         <Button><NavLink to="/teams/rl" className="teamnavigation">RL</NavLink></Button>
-        <Button>CS: GO</Button>
-        <Button>Clash Royale</Button>
+        <Button><NavLink to="/teams/csgo" className="teamnavigation">CS: GO</NavLink></Button>
+        <Button><NavLink to="/teams/clashroyale" className="teamnavigation">Clash Royale</NavLink></Button>
       </ButtonGroup>
     );
   }

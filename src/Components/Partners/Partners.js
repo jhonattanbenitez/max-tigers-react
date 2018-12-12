@@ -4,20 +4,48 @@ import RedBull from './Red_Bull.jpg';
 
 
 const Partners = () => {
+    let style = {
+        marginBottom: "16px"
+    };
     return (
         
         <Container>
-            <Card>
+            <Card style={style}>
               <Row>
                   <Col xs="12" sm="4">
-                      <CardImg top width="100%" src={RedBull} alt="Card image cap" />
+                      <CardImg top width="100%" src={RedBull} alt="Card image cap"  style={style}/>
                   </Col>
                   <Col sm="8">
                       <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardTitle>Patrocinador</CardTitle>
+                        <CardSubtitle>Subtitulo</CardSubtitle>
                         <CardText>
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Contenido del Patrocinador.
+                        </CardText>
+                        
+                      </CardBody>
+                  </Col>
+                  <Col xs="12" sm="4">
+                      <CardImg top width="100%" src={RedBull} alt="Card image cap" style={style}/>
+                  </Col>
+                  <Col sm="8">
+                      <CardBody>
+                        <CardTitle>Patrocinador</CardTitle>
+                        <CardSubtitle>Subtitulo</CardSubtitle>
+                        <CardText>
+                            Contenido del Patrocinador.
+                        </CardText>
+                        
+                      </CardBody>
+                  </Col>  <Col xs="12" sm="4">
+                      <CardImg top width="100%" src={RedBull} alt="Card image cap" style={style}/>
+                  </Col>
+                  <Col sm="8">
+                      <CardBody>
+                        <CardTitle>Patrocinador</CardTitle>
+                        <CardSubtitle>Subtitulo</CardSubtitle>
+                        <CardText>
+                            Contenido del Patrocinador.
                         </CardText>
                         
                       </CardBody>

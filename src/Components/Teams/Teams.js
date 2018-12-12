@@ -6,31 +6,42 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import LeagueOfLegends from './LeagueOfLegends';
 import equipos from './equipos.png';
 
-/* const LeagueOfLegends = ({name, id, linea}) =>{
-    
+const RocketLeague = () =>{
     return (
         <div>
-            <h3>League Of Legends</h3>
+            <h3>Rocket League</h3>
             <Row>
-                <Player id="1"
-                    image=""
-                    invocador={name}
-                    linea = {linea}
-                    nombre = "Nombre 1"
-                />
+                <Player />
                 <Player />
                 <Player />
                 <Player />
             </Row>
         </div>
     );
-} */
+}
 
-const RocketLeague = () =>{
+const CounterStrikeGo = () =>{
     return (
         <div>
-            <h3>Rocket League</h3>
+            <h3>Counter Strike: Global Offensive</h3>
             <Row>
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+            </Row>
+        </div>
+    );
+}
+
+const ClashRoyale = () =>{
+    return (
+        <div>
+            <h3>Clash Royale</h3>
+            <Row>
+                <Player />
                 <Player />
                 <Player />
                 <Player />
@@ -78,6 +89,8 @@ class Teams extends Component {
                                 nombre={this.state.nombre} />} exact/>
                                 {/* <Route path="/teams/lol" component={LeagueOfLegends}/> */}
                                 <Route path="/teams/rl" component={RocketLeague}/>
+                                <Route path="/teams/csgo" component={CounterStrikeGo}/>
+                                <Route path="/teams/clashroyale" component={ClashRoyale}/> 
                             </Switch>
                         </Container>
                     

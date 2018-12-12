@@ -3,25 +3,21 @@ import News from '../News/News';
 import ContentLoader from 'react-content-loader';
 import { Row } from 'reactstrap';
 const NewsList = ({ news, images, contentLoaded, index }) => {
-  console.log(contentLoaded);
-  console.log('news', news);  
-  console.log('index: ', index);
-  console.log('data en newslist', news);
-  console.log("images en newlist", images);
+  let mb = {
+    marginBottom: "16px"
+  }
   if(contentLoaded === false){
     return(<ContentLoader type="instagram" />);
   }else{
   return (
     <Row>
       { 
-           news.map((user, i) => {
-             
-          
-           return (
+          news.map((user, i) => {
+          return (
                 
                     
                        
-                         <News
+                         <News style={mb}
                             key={i}
                             image={images[i]}  
                             title={news[i].title.rendered}

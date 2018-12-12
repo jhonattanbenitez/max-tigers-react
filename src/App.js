@@ -8,7 +8,6 @@ import Footer from './Components/Footer/Footer';
 import ReactTwitchEmbedVideo from "react-twitch-embed-video";
 import Partners from './Components/Partners/Partners';
 import './App.css';
-/* import lolplayers from './lol.js'; */
 
 const Streams = () =>{
   return(
@@ -40,18 +39,15 @@ class App extends Component {
     fetch('https://beta.maxtigers.com/wp/wp-json/wp/v2/posts')
     .then(res =>res.json())
     .then(data => {
-      console.log('data incial', data);
       this.setState({news: data});
       let featuredImageId = '';
       let urls = [];
       data.forEach((post, index) => {
-        
         featuredImageId = post.featured_media;
         fetch(`https://beta.maxtigers.com/wp/wp-json/wp/v2/media/${featuredImageId}`)
         .then(res =>  res.json())
         .then(data =>{
          urls[index] = (data.guid.rendered)
-         console.log('urls', urls);
          this.setState({images: urls, contentLoaded:true, index: index} )        
         })
       });
