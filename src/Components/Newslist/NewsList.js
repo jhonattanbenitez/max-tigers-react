@@ -3,6 +3,7 @@ import News from '../News/News';
 import ContentLoader from 'react-content-loader';
 import { Row } from 'reactstrap';
 const NewsList = ({ news, images, contentLoaded, index }) => {
+ 
   let mb = {
     marginBottom: "16px"
   }
@@ -24,8 +25,7 @@ const NewsList = ({ news, images, contentLoaded, index }) => {
                             content={news[i].content.rendered}
                                                     
                           />
-                       
-                   
+          
               
           );
         })

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import {Row} from 'reactstrap';
 import Player from '../Player/Player'
+import soporte from './images/lol/soporte.PNG'
+import mid from './images/lol/mid.jpg'
 
 class LeagueOfLegends extends Component {
-    render(){
+      render(){
         return (
             <div>
-                <h3>League Of Legends</h3>
+                <h3 className="text-center m-4 ">League Of Legends</h3>
                 <Row>
-                    <Player invocador="Invocador 1" name="Nombre 1" linea="Top"/>
-                    <Player invocador="Invocador 2" name="Nombre 2" linea="Jungla"/>
-                    <Player invocador="Invocador 3" name="Nombre 3" linea="Mid"/>
-                    <Player invocador="Invocador 4" name="Nombre 4" linea="ADC"/>
-                    <Player invocador="Invocador 5" name="Nombre 5" linea="Support"/>
-                    <Player invocador="Invocador 6" name="Nombre 6" linea="Coach"/>
+                    <Player invocador="Anillos" name="" linea="Top" src={soporte}/>
+                    <Player invocador="Elune" name="" linea="Jungla" src={soporte}/>
+                    <Player invocador="Pelirojo 3" name="" linea="Mid" src={mid}/>
+                    <Player invocador="Invocador 4" name="Nombre 4" linea={soporte} src={soporte}/>
+                    <Player invocador="Invocador 5" name="Nombre 5" linea="top" src={soporte}/>
+                    <Player invocador="Invocador 6" name="Nombre 6" linea="Coach" src={soporte}/>
                 </Row>
             </div>
         );
