@@ -61,7 +61,7 @@ class News extends Component  {
       return (
                  
                
-        <Col xs="12" sm="4">
+        <Col xs="12" sm="6" className="mt-4">
           <Card className="cardproperties">
             <CardImg top width="100%" src={image} alt="Card image cap" />
             <CardBody>

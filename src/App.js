@@ -16,9 +16,10 @@ const Streams = () =>{
 }
 
 class App extends Component {
+  l
   constructor() {
     super()
-    this.state = {
+      this.state = {
       news: [
         { 
           src: '',
@@ -35,6 +36,7 @@ class App extends Component {
 
     }
   }
+    
     componentDidMount() {
     fetch('https://beta.maxtigers.com/wp/wp-json/wp/v2/posts')
     .then(res =>res.json())
@@ -53,7 +55,7 @@ class App extends Component {
       });
       
     });
-  }
+    }
  
   render() {
     return (

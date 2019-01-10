@@ -13,7 +13,7 @@ class LeagueOfLegends extends Component {
                     <Player invocador="Anillos" name="" linea="Top" src={soporte}/>
                     <Player invocador="Elune" name="" linea="Jungla" src={soporte}/>
                     <Player invocador="Pelirojo 3" name="" linea="Mid" src={mid}/>
-                    <Player invocador="Invocador 4" name="Nombre 4" linea={soporte} src={soporte}/>
+                    <Player invocador="Invocador 4" name="Nombre 4" linea="ADC" src={soporte}/>
                     <Player invocador="Invocador 5" name="Nombre 5" linea="top" src={soporte}/>
                     <Player invocador="Invocador 6" name="Nombre 6" linea="Coach" src={soporte}/>
                 </Row>

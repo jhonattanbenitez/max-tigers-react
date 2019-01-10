@@ -16,8 +16,7 @@ const NewsList = ({ news, images, contentLoaded, index }) => {
           news.map((user, i) => {
           return (
                 
-                    
-                       
+                                       
                          <News style={mb}
                             key={i}
                             image={images[i]}  
