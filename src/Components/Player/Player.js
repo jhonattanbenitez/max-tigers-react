@@ -14,8 +14,9 @@ const Player = (props) =>{
                     alt="Card image cap" />
                 <CardBody>
                   <CardTitle>{props.invocador}</CardTitle>
-                  <CardSubtitle>{props.linea}</CardSubtitle>
-                  <CardSubtitle>{props.name}</CardSubtitle>
+                  <CardSubtitle className="mt-1 ">{props.linea}</CardSubtitle>
+                  <CardSubtitle className="mt-1">{props.name}</CardSubtitle>
+                  <CardSubtitle className="mt-1">{props.ciudad}</CardSubtitle>
                 </CardBody>
             </Card>
         </Col>

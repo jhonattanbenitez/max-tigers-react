@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import {Row} from 'reactstrap';
 import Player from '../Player/Player'
-import soporte from './images/lol/soporte.PNG'
-import mid from './images/lol/mid.jpg'
+import adc from './images/lol/DanxWeb.jpg'
+import jungla from './images/lol/EluneWeb.jpg'
+import mid from './images/lol/PelirrojoWeb.jpg'
+import top from './images/lol/Sr-AnillosWeb.jpg'
+import jungla2 from './images/lol/YustyWeb.jpg'
+import adc2 from './images/lol/JuanPeaceWeb.jpg'
 
 class LeagueOfLegends extends Component {
       render(){
@@ -10,12 +14,12 @@ class LeagueOfLegends extends Component {
             <div>
                 <h3 className="text-center m-4 ">League Of Legends</h3>
                 <Row>
-                    <Player invocador="Anillos" name="" linea="Top" src={soporte}/>
-                    <Player invocador="Elune" name="" linea="Jungla" src={soporte}/>
-                    <Player invocador="Pelirojo 3" name="" linea="Mid" src={mid}/>
-                    <Player invocador="Invocador 4" name="Nombre 4" linea="ADC" src={soporte}/>
-                    <Player invocador="Invocador 5" name="Nombre 5" linea="top" src={soporte}/>
-                    <Player invocador="Invocador 6" name="Nombre 6" linea="Coach" src={soporte}/>
+                    <Player invocador="Anillos" name="" ciudad="Cucúta" linea="Superior" src={top}/>
+                    <Player invocador="Elune" name="" ciudad="Bogotá" linea="Jungla" src={jungla}/>
+                    <Player invocador="Pelirrojo" name="" ciudad="Cucúta" linea="Medio" src={mid}/>
+                    <Player invocador="Danx" name="" ciudad="Bogotá" linea="Tirador" src={adc}/>
+                    <Player invocador="Yusty" name="" ciudad="Jamundí" linea="Jungla" src={jungla2}/>
+                    <Player invocador="Juan Peace" name="Bogotá" ciudad="" linea="Tirador" src={adc2}/>
                 </Row>
             </div>
         );
