@@ -14,12 +14,47 @@ class LeagueOfLegends extends Component {
             <div>
                 <h3 className="text-center m-4 ">League Of Legends</h3>
                 <Row>
-                    <Player invocador="Anillos" name="" ciudad="Cucúta" linea="Superior" src={top}/>
-                    <Player invocador="Elune" name="" ciudad="Bogotá" linea="Jungla" src={jungla}/>
-                    <Player invocador="Pelirrojo" name="" ciudad="Cucúta" linea="Medio" src={mid}/>
-                    <Player invocador="Danx" name="" ciudad="Bogotá" linea="Tirador" src={adc}/>
-                    <Player invocador="Yusty" name="" ciudad="Jamundí" linea="Jungla" src={jungla2}/>
-                    <Player invocador="Juan Peace" name="Bogotá" ciudad="" linea="Tirador" src={adc2}/>
+                    <Player 
+                            invocador="Anillos" 
+                            name="" 
+                            ciudad="Cúcuta" 
+                            linea="Superior" 
+                            src={top}
+                            socialUrl="https://www.facebook.com/SrAnillos/"/>
+                    <Player 
+                            invocador="Elune" 
+                            name="" ciudad="Bogotá" 
+                            linea="Jungla" 
+                            src={jungla} 
+                            socialUrl="https://www.facebook.com/Elunelol/"/>
+                    <Player 
+                            invocador="Pelirrojo" 
+                            name="" 
+                            ciudad="Cúcuta" 
+                            linea="Medio" 
+                            src={mid} 
+                            socialUrl="https://www.facebook.com/PelirrojoLool/"/>
+                    <Player 
+                            invocador="Danx" 
+                            name="" 
+                            ciudad="Bogotá" 
+                            linea="Tirador" 
+                            src={adc} 
+                            socialUrl="https://www.facebook.com/Danx-378134766271926/"/>
+                    <Player 
+                            invocador="Yusty" 
+                            name="" 
+                            ciudad="Jamundí"
+                            linea="Jungla" 
+                            src={jungla2} 
+                            socialUrl="https://www.facebook.com/YustyENP/"/>
+                    <Player 
+                            invocador="Juan Peace" 
+                            name="Bogotá" 
+                            ciudad="" 
+                            linea="Tirador" 
+                            src={adc2} 
+                            socialUrl="https://www.facebook.com/"/>
                 </Row>
             </div>
         );

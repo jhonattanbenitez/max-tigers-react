@@ -2,3 +2,12 @@ h2{
     color: #e25714;
     margin: 1rem;
 }
+.cardPlayer{
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 5px 10px 8px #888888;
+}
+.playerImg{
+    border-bottom: 10px solid grey;
+}
